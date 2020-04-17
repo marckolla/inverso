@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nome ao contrario</title>
+</head>
+<body>
+    <input id="txt" type="text" placeholder="Digite seu nome"><button id="btn" onclick="apert()">Enviar</button><hr>
+    <p id="painel1"></p><br>
+    <p id="painel2"></p>
+    
+
+    <script>
+    var pai1 = document.getElementById("painel1");
+    var pai2 = document.getElementById("painel2");
+    var inome = document.getElementById("txt");
+    var botao = document.getElementById("btn");
+    
+    function apert(){
+        
+        //var nome = "";
+        var nome = [];
+        pai1.innerHTML = inome.value;
+        for(let i = inome.value.length - 1;i >= 0;i--){
+            nome[i] = inome.value[i];
+        }
+        for(let i = inome.value.length - 1;i >= 0;i--){
+    
+            pai2.innerHTML+=nome[i]+" "
+        }
+        
+        
+        
+    }
+    
+    
+    </script>
+</body>
+</html>
